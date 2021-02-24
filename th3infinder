@@ -1,0 +1,201 @@
+#!/usr/bin/python3
+# script made my hydro, for testing and eductional purpose only i take no responseabilly on misuse or any damge caused by this script.
+import os
+import socket
+import platform
+import requests
+import os
+import sys
+import json, re
+# recommended system: Linux (Debain 10).
+# tested in Kali Linux
+def clear():
+    if platform.system() == 'Windows':
+        os.system('cls')
+    if platform.system() == 'Linux':
+        os.system('clear')
+
+
+ 
+if os.geteuid()==0:
+  print ("Permissions Aprooved, os.getuid=0 V")
+else:
+  print("MISSING PERMISSIONS, os.getuid=1 V")
+
+if not os.geteuid()==0:
+    sys.exit('Please run this script in sudo permissions')
+
+def banner():
+    
+    print('''
+\033[94m████████╗██╗  ██╗██████╗ ██╗███╗   ██╗███████╗██╗███╗   ██╗██████╗ ███████╗██████╗              
+\033[94m╚══██╔══╝██║  ██║╚════██╗██║████╗  ██║██╔════╝██║████╗  ██║██╔══██╗██╔════╝██╔══██╗
+\033[94m   ██║   ███████║ █████╔╝██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║  ██║█████╗  ██████╔╝
+\033[94m   ██║   ██╔══██║ ╚═══██╗██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗
+\033[94m   ██║   ██║  ██║██████╔╝██║██║ ╚████║██║     ██║██║ ╚████║██████╔╝███████╗██║  ██║
+\033[94m   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ''')
+    print("""          \033[94mTh3InfindeR - Information Gathering and A Tool For Pentesting <3\033[94m""")
+    print()
+
+def homemenu():
+    print("""
+\033[92m 1)\033[92m Whois Lookup                            
+\033[92m 2)\033[92m DNS Lookup            
+\033[92m 3)\033[92m GeoIP Lookup             
+\033[92m 4)\033[92m Subnet Lookup          
+\033[92m 5)\033[92m Nmap Port Scanner        
+\033[92m 6)\033[92m DNS Finder              
+\033[92m 7)\033[92m Cloudflare Bypass  ( UNDER WORK)                                                    
+\033[92m 8)\033[92m HTTP Header   
+\033[92m 9)\033[92m Host Finder 
+\033[92m 10)\033[92m IP Locator Finder
+\033[92m 11)\033[92m Shared DNS Servers Scanner
+\033[92m 12)\033[92m Get Robots.txt
+\033[92m 13)\033[92m Bypass WAF  ( UNDER WORK)                                                  
+\033[92m 14)\033[92m Exit Script                       """)
+    print()
+
+def Th3InfindeR():
+    try:
+        
+        if 1 > 2 :
+              print("buffer")
+        else:
+            options()   
+    except socket.gaierror:
+        Th3InfindeR()
+    except UnboundLocalError:
+        Th3InfindeR()
+    except requests.exceptions.ConnectionError:
+        exit
+    except IndexError:
+        print('Index Error, restarting tool...')
+        Th3InfindeR()
+
+def options():
+    banner()
+    site = input('\033[92mPlease Type The Website To Get Information On: \033[92m')
+
+    homemenu()
+
+    selection = input('Choose an Option From This List (1 - 13): \033[92m')
+
+    if selection == '1':
+        whois = 'https://api.hackertarget.com/whois/?q='+site
+        information = requests.get(whois)
+        print('\033[92m')
+        print(information.text)
+        options()
+
+
+    if selection == '2':
+        dnslookup = 'https://api.hackertarget.com/dnslookup/?q='+site
+        information = requests.get(dnslookup)
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '3':
+        geolocationip = 'https://api.hackertarget.com/geoip/?q='+site
+        information = requests.get(geolocationip)
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '4':
+        subnetmask_scanner = 'https://api.hackertarget.com/subnetcalc/?q='+site
+        information = requests.get(subnetmask_scanner)
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '5':
+        nmap_port_scanner = 'https://api.hackertarget.com/nmap/?q='+site
+        information = requests.get(nmap_port_scanner)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '6':
+        dnsfinder = 'https://api.hackertarget.com/mtr/?q='+site
+        information = requests.get(dnsfinder)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+    
+    elif selection == '8':
+        http_header = 'https://api.hackertarget.com/httpheaders/?q='+site
+        information = requests.get(http_header)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '9':
+        host_search = 'https://api.hackertarget.com/hostsearch/?q='+site
+        information = requests.get(host_search)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '10':
+        sitesocket = socket.gethostbyname(site)
+        geolocationip = 'https://ipinfo.io/'+sitesocket+'/json'
+        information = requests.get(geolocationip)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '11':
+        dnsfinder_shared = 'https://api.hackertarget.com/findshareddns/?q='+site
+        information = requests.get(dnsfinder_shared)
+        clear()
+        print('\033[92m')
+        print(information.text)
+        options()
+
+    elif selection == '12':
+        robots = 'https://'+site+'/robots.txt'
+        information = requests.get(robots)
+        print('\033[99m')
+        print(information.text)
+        options()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    elif selection == '14':
+            exit
+
+    else:
+           
+        Th3InfindeR()
+Th3InfindeR()
