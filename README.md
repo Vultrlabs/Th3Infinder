@@ -3,7 +3,7 @@ A tool for penetration testing and information gathering Made by SIRA.
 
 # Installation
 First click on the download button or clone this repository
-git clone https://github.com/SIRA/Th3Infinder.git
+git clone https://github.com/SIRAAnalyses/Th3Infinder.git
 After that you need to install the requirements
 
 Run pip install -r requirements.txt in terminal or cmd, but install python-pip first to have pip.
