@@ -44,15 +44,13 @@ def homemenu():
 \033[92m 3)\033[92m GeoIP Lookup             
 \033[92m 4)\033[92m Subnet Lookup          
 \033[92m 5)\033[92m Nmap Port Scanner        
-\033[92m 6)\033[92m DNS Finder              
-\033[92m 7)\033[92m Cloudflare Bypass  ( UNDER WORK)                                                    
-\033[92m 8)\033[92m HTTP Header   
-\033[92m 9)\033[92m Host Finder 
-\033[92m 10)\033[92m IP Locator Finder
-\033[92m 11)\033[92m Shared DNS Servers Scanner
-\033[92m 12)\033[92m Get Robots.txt
-\033[92m 13)\033[92m Bypass WAF  ( UNDER WORK)                                                  
-\033[92m 14)\033[92m Exit Script                       """)
+\033[92m 6)\033[92m DNS Finder                                                                
+\033[92m 7)\033[92m HTTP Header   
+\033[92m 8)\033[92m Host Finder 
+\033[92m 9)\033[92m IP Locator Finder
+\033[92m 10)\033[92m Shared DNS Servers Scanner
+\033[92m 11)\033[92m Get Robots.txt                                               
+\033[92m 12)\033[92m Exit Script                       """)
     print()
 
 def Th3InfindeR():
@@ -125,7 +123,7 @@ def options():
         print(information.text)
         options()
     
-    elif selection == '8':
+    elif selection == '7':
         http_header = 'https://api.hackertarget.com/httpheaders/?q='+site
         information = requests.get(http_header)
         clear()
@@ -133,7 +131,7 @@ def options():
         print(information.text)
         options()
 
-    elif selection == '9':
+    elif selection == '8':
         host_search = 'https://api.hackertarget.com/hostsearch/?q='+site
         information = requests.get(host_search)
         clear()
@@ -141,7 +139,7 @@ def options():
         print(information.text)
         options()
 
-    elif selection == '10':
+    elif selection == '9':
         sitesocket = socket.gethostbyname(site)
         geolocationip = 'https://ipinfo.io/'+sitesocket+'/json'
         information = requests.get(geolocationip)
@@ -150,7 +148,7 @@ def options():
         print(information.text)
         options()
 
-    elif selection == '11':
+    elif selection == '10':
         dnsfinder_shared = 'https://api.hackertarget.com/findshareddns/?q='+site
         information = requests.get(dnsfinder_shared)
         clear()
@@ -158,14 +156,14 @@ def options():
         print(information.text)
         options()
 
-    elif selection == '12':
+    elif selection == '11':
         robots = 'https://'+site+'/robots.txt'
         information = requests.get(robots)
         print('\033[99m')
         print(information.text)
         options()
         
-    elif selection == '14':
+    elif selection == '12':
             exit
 
     else:
