@@ -34,7 +34,7 @@ def banner():
 \033[94m   ██║   ██╔══██║ ╚═══██╗██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║  ██║██╔══╝  ██╔══██╗
 \033[94m   ██║   ██║  ██║██████╔╝██║██║ ╚████║██║     ██║██║ ╚████║██████╔╝███████╗██║  ██║
 \033[94m   ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═╝ ''')
-    print("""          \033[94mTh3InfindeR - Information Gathering and A Tool For Pentesting <3\033[94m""")
+    print("""          \033[94mTh3InfindeR - Information Gathering and A Tool For Pentesting Developed By SIRA\033[94m""")
     print()
 
 def homemenu():
