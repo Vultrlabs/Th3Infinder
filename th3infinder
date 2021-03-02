@@ -164,34 +164,7 @@ def options():
         print('\033[99m')
         print(information.text)
         options()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     elif selection == '14':
             exit
 
