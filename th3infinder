@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# script made my hydro, for testing and eductional purpose only i take no responseabilly on misuse or any damge caused by this script.
+# The script is for penetration testing and eductional purpose only we do not take responseabilly on misuse or any damge caused by this script.
 import os
 import socket
 import platform
