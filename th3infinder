@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# The script is for penetration testing and eductional purpose only we do not take responseabilly on misuse or any damge caused by this script.
+# The script is for penetration testing and eductional purpose only developers do not take responseabilly on misuse or any damge caused by this script.
 import os
 import socket
 import platform
@@ -7,8 +7,7 @@ import requests
 import os
 import sys
 import json, re
-# recommended system: Linux (Debain 10).
-# tested in Kali Linux
+# recommended system: Linux
 def clear():
     if platform.system() == 'Windows':
         os.system('cls')
