@@ -13,4 +13,4 @@ For linux:
 5. chmod +x th3infinder
 6 .sudo ./th3infinder
 
-Scripted was tested on Linux only.
+Script was tested on Linux only.
