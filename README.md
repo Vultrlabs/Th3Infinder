@@ -1,5 +1,5 @@
 # Th3Infinder
-A tool for penetration testing and information gathering developed by SIRA.
+A tool for penetration testing and information gathering developed by Revise7.
 
 # Installation
 1. clone this repository
