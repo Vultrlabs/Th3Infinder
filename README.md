@@ -14,3 +14,5 @@ For linux:
 6 .sudo ./th3infinder
 
 Script was tested on Linux only. Feel free to test it on Windows 10.
+
+This script uses an API site
