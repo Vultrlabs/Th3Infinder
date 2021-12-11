@@ -1,9 +1,9 @@
 # Th3Infinder
-A tool for penetration testing and information gathering developed by Revise7.
+A tool for penetration testing and information gathering developed by Vultrlabs.
 
 # Installation
 1. clone this repository
-2. git clone https://github.com/Revise7/Th3Infinder.git
+2. git clone https://github.com/Vultrlabs/Th3Infinder.git
 After that, install the requirements
 
 4 .Run pip install -r requirements.txt in terminal or cmd, but install python-pip first to have pip.
